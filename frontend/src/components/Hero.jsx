@@ -11,9 +11,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-white border-b border-slate-100">
       <div className="max-w-5xl mx-auto px-6 pt-16 pb-20 sm:pt-24 sm:pb-28 text-center">
-        {/* <div className="inline-flex items-center gap-2 px-3 py-1 text-xs font-medium text-brand-700 bg-brand-50 rounded-full mb-6 border border-brand-100">
-          <span> Summer 2026 Cohort Now Open</span>
-        </div> */}
+        
         
         <h1 className="text-4xl sm:text-6xl font-extrabold text-slate-950 tracking-tight max-w-3xl mx-auto leading-[1.15]">
           Build the Future: <br />

@@ -39,7 +39,9 @@ export default function RegistrationForm() {
     setStatus({ loading: true, success: null, message: '' });
 
     try {
-      const response = await fetch('http://localhost:5000/api/enquiry', {
+      const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+      
+      const response = await fetch(`${API_URL}/api/enquiry`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
@@ -48,7 +50,11 @@ export default function RegistrationForm() {
       const data = await response.json();
 
       if (response.ok) {
-        setStatus({ loading: false, success: true, message: 'Seat reserved successfully! Check your inbox for updates.' });
+        setStatus({ 
+          loading: false, 
+          success: true, 
+          message: 'Seat reserved successfully! Your registration data is recorded inside MongoDB.' 
+        });
         setFormData({ name: '', email: '', phone: '' });
       } else {
         setStatus({ loading: false, success: false, message: data.message || 'Submission failed. Please try again.' });

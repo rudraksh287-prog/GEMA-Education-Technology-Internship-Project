@@ -2,11 +2,11 @@ import React from 'react';
 
 export default function WorkshopDetails() {
   const details = [
-    { label: 'Age Group', value: '8–14 Years', icon: '🧑' },
-    { label: 'Duration', value: '4 Weeks', icon: '📅' },
-    { label: 'Mode', value: 'Online (Live)', icon: '💻' },
-    { label: 'Fees', value: '₹2,999', icon: '💳' },
-    { label: 'Start Date', value: '15 July 2026', icon: '🚀' },
+    { label: 'Age Group', value: '8–14 Years'},
+    { label: 'Duration', value: '4 Weeks'},
+    { label: 'Mode', value: 'Online (Live)'},
+    { label: 'Fees', value: '₹2,999'},
+    { label: 'Start Date', value: '15 July 2026'},
   ];
 
   return (
@@ -20,13 +20,13 @@ export default function WorkshopDetails() {
         {details.map((item, index) => (
           <div 
             key={index} 
-            className={`bg-white border border-slate-200/80 rounded-xl p-5 shadow-sm hover:border-brand-600/30 hover:shadow-md transition-all duration-200 ${
+            className={`bg-white border border-slate-200/80 rounded-xl p-5 shadow-sm  transition-all duration-200 ${
               index === 4 ? 'col-span-2 md:col-span-1' : ''
             }`}
           >
             <div className="text-2xl mb-3">{item.icon}</div>
-            <div className="text-xs font-medium text-slate-500 uppercase tracking-wider">{item.label}</div>
-            <div className="mt-1 text-base font-semibold text-slate-900">{item.value}</div>
+            <div className="text-xl font-serif text-black tracking-wider">{item.label}</div>
+            <div className="mt-1 text-base font-semibold text-slate-500">{item.value}</div>
           </div>
         ))}
       </div>

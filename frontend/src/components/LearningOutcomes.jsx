@@ -21,7 +21,7 @@ export default function LearningOutcomes() {
           {outcomes.map((outcome, index) => (
             <div 
               key={index} 
-              className="p-6 rounded-xl border border-slate-200/60 bg-slate-50/50 hover:bg-white hover:border-brand-600/30 hover:shadow-sm transition-all duration-200"
+              className="p-6 rounded-b-4xl border border-slate-200/60 bg-slate-50/50 hover:bg-white hover:border-brand-600/30 hover:shadow-sm transition-all duration-200"
             >
               <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-brand-50 text-brand-600 font-semibold text-sm mb-4">
                 0{index + 1}
